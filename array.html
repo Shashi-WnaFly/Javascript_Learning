@@ -5,11 +5,41 @@
 
     // Nested Array
 
-    let varArray1 = [[23, "leopard"], [25, "Parrot"]]
-    for(i = 0; i < varArray1.length; i++){
-        for(j = 0; j < varArray1.length[i]; j++){
-            console.log(varArray1[i][j])
-        }
-    }
+    let varArray1 = [[23, "leopard"], [25, "Parrot"], [[125, 'peepal'], [70, 'human']]]
+
+    // for(i = 0; i < varArray1.length; i++){
+
+    //     for(j = 0; j < varArray1[0].length; j++){
+
+    //         console.log(varArray1[i][j])
+    //     }
+    // }
+
+    varArray1[0][0] = 55; // changing the index value of array.
+
+    // for(i = 0; i < varArray1.length; i++){
+
+    //     for(j = 0; j < varArray1[0].length; j++){
+
+    //         console.log(varArray1[i][j]);
+
+    //         for(k = 0; k < varArray1[i][j].length; k++){
+    //             console.log(varArray1[i][j][k]);
+    //         }
+    //     }
+    // }
+
+    let varArr2 = [21, 34, 12, 28]
+    varArr2.push('Good', 'Book') // push method help to add new array at the last with the old array.
+    // console.log(varArr2)
+
+    varArr2.pop(); // pop method help to remove last element from the array.
+    console.log(varArr2)
+
+    varArr2.shift()
+    console.log(varArr2)  // shift method help to remove the first element from the array.
+
+    varArr2.unshift('Nature') // unshift method help to add element at the first of the old array.
+    console.log(varArr2)
 
 </script>
