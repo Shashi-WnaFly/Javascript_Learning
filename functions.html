@@ -1,0 +1,46 @@
+<script>
+
+    function myFunction() {
+        console.log("hi World")
+    }
+
+    myFunction()
+
+    function ourReusableCode(sub1, sub2) {
+        subtract = sub1 - sub2;
+        console.log(subtract)
+    }
+
+    ourReusableCode(299, 255)
+
+    let myGlobe = 'Earth' // global variable
+
+    function term(){
+        mount = 39;  // global variable
+    }
+
+    function term2() {
+        let output = ""
+        if(myGlobe != "undefined"){
+            output += 'myGlobe: ' + myGlobe
+        }
+
+        if(myGlobe != "undefined"){
+            output += ' mount: ' + mount
+        }
+        console.log(output)
+    }
+
+    term()  // calling the function
+    term2() // calling the function
+    
+    function localVar(){
+        let locVariable = 'Deer'
+        console.log(locVariable)
+    }
+
+    localVar();
+
+    console.log(locVariable) // it produce an error because locVariable(Local Variable) is presented only for function localVar
+
+</script>
