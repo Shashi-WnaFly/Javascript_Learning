@@ -1,0 +1,24 @@
+<script>
+
+function nextInLine(arr, item) {
+    arr.push(item)
+   return arr.shift()
+}
+
+let testArr = [1,2,3,4,5]
+
+console.log('Before: ' + JSON.stringify(testArr))
+console.log(nextInLine(testArr, 6))
+console.log('After: ' + JSON.stringify(testArr))
+
+function checkEqual(num){
+    
+   // return num == 11; this will return true because '==' operator first match the datatype then check equality.
+   // return num === 11; this will return true
+   // return num !== 11; this will return true because '!==' operator it first match the datatype then check equality.
+   return num != 11; // this will return true
+}
+
+console.log(checkEqual('11'))
+
+</script>
