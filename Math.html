@@ -1,0 +1,13 @@
+<script>
+
+    function checkSomeError(a, b){
+        if(a < 0 || b < 0) {
+            return undefined;
+        }
+        let num1 = Math.sqrt(a), num2 = Math.sqrt(b)
+        return Math.round(Math.pow(num1 + num2, 2));
+    }
+
+    console.log(checkSomeError(3, 3));
+
+</script>
