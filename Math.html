@@ -8,6 +8,56 @@
         return Math.round(Math.pow(num1 + num2, 2));
     }
 
-    console.log(checkSomeError(3, 3));
+    // console.log(checkSomeError(-3, 3)); this will return undefined
+    // console.log(checkSomeError(3, 3)); this will return 12
 
+    // playing card game
+
+    let count = 0;
+
+    function playCard(card){
+
+        switch(card){
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+                count++;
+                break;
+            case 10:
+            case "J":
+            case "Q":
+            case "K":
+            case "A":
+                count--;    
+                break;
+        }
+
+        let holdbet = 'hold';
+
+        if(count > 0){
+            holdbet = 'bet';
+        }
+
+        return count + " " + holdbet;
+    }
+
+    playCard(2); playCard('K'); playCard(7); playCard("A"); playCard('K')
+    console.log(playCard(4))
+
+    //      Creating an Object.
+
+    let myobj = {
+        'shirt': 'checked shirt',
+        'pant': 'jeans',
+        'number': '32',
+        'vehicle': 'Bike'
+    }
+
+    console.log(myobj.number)
+    console.log(myobj.pant)
+
+    console.log(myobj["shirt"])
+    console.log(myobj['vehicle'])
 </script>
