@@ -1,0 +1,44 @@
+<script>
+
+    anObject = {
+        key: 'solution',
+        bycycle: 'balance',
+        life: 'Great'
+    }
+
+    function checkProp(val){
+        
+        if(anObject.hasOwnProperty(val)){
+            return anObject[val];
+        }
+
+        else{
+            return 'Not Found';
+        }
+    }
+
+    console.log(checkProp('kroey'))
+
+    let myMovie = [
+        {
+            interstellar: 'Christopher Nolan',
+            IronMan: 'Robert Downy',
+            SpiderMan: 'Tom Holland',
+            Marykom: 'Priyanka Chopra',
+            formats: [
+                "1080p",
+                '4K',
+            ],
+            jackal: false
+        },
+        {
+            Matrix: "Keanu Reeves",
+            Terminator: "Arnold Schwarzenegger",
+            Endgame: 'Russo brothers'
+        }
+    ]
+
+    console.log(myMovie[0]['formats'][1])  // print 4k
+    console.log(myMovie[0]['jackal'])  // print false
+
+</script>
