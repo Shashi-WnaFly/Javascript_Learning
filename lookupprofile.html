@@ -1,0 +1,45 @@
+<script>
+
+    let contacts = [
+        {
+            "firstName": "Prodot",
+            "lastName": "lmt",
+            "number": "78768767661",
+            "likes": ["keyboard", "mouse", "antivirus"]
+        },
+
+        {
+            "firstName": "Agni",
+            "lastName": "pen_distribution",
+            "number": "1515151513",
+            "likes": ["faster_Pen", "Smooth_Pen", "Regular_Pen"]
+        },
+
+        {
+            "firstName": "Acer",
+            "lastName": "Computer_distributor",
+            "number": "68468466136",
+            "likes": ["Predator", "Swift", "Nitro"]
+        },
+
+        {
+            "firstName": "Ceo of band",
+            "lastName": "bond",
+            "number": "2569863217",
+            "likes": ["band-org", "band-protect", "band-united"]
+        }
+    ]
+
+    function lookUpProfile(name, prop){
+        for(i = 0; i < contacts.length; i++){
+            if(contacts[i].firstName === name) return contacts[i][prop];
+        }
+
+        return "No such contacts found";
+    }
+
+    console.log(lookUpProfile("Acer", "likes"));
+    console.log(lookUpProfile("Ceo of band", "lastName"));
+    console.log(lookUpProfile("godzilla", "likes"));
+
+</script>
