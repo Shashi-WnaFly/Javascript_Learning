@@ -17,7 +17,7 @@
         }
     }
 
-    console.log(checkProp('kroey'))
+    console.log(checkProp('key'))
 
     let myMovie = [
         {
@@ -38,7 +38,72 @@
         }
     ]
 
-    console.log(myMovie[0]['formats'][1])  // print 4k
+    console.log(myMovie[0].formats[1])  // print 4k
     console.log(myMovie[0]['jackal'])  // print false
+
+    let collection = {
+
+        "2255": {
+            "album": "Barbie doll",
+            "artist": "Barbie",
+            "tracks":[
+                "I am a barbie girl",
+                "barbie barbie"
+            ]
+        },
+
+        "2356": {
+            "album": "Jhankar Beats",
+            "artist": "Shaan",
+            "tracks":[
+                "Suno na",
+                "tune tuhme pehchana nhi"
+            ]
+        },
+
+        "2457": {
+            "album": "Arijit Singh",
+            "tracks": []
+        },
+
+        "2658": {
+            "album": "Sonu Nigam"
+        }
+    }
+
+    let collectionCopy = JSON.parse(JSON.stringify(collection));
+
+    function updateRecords(id, prop, value){
+
+        if(value === ""){
+            delete collection[id][prop];
+        }
+
+        else if(prop === "tracks") {
+            collection[id][prop] = collection[id][prop] || [];
+            collection[id][prop].push(value);
+        }
+
+        else if(value !== ""){
+            collection[id][prop] = value;
+        }
+
+        else{
+            collection.push(id);
+            collection[id].push(prop);
+            collection[id][prop].push(value);
+        }
+
+        return collection;
+    }
+
+    let ar = {
+        "album": "A.R Rehman",
+        "tracks": "Jai Ho"
+    }
+
+    // console.log(updateRecords("2255", "artist", "")) // delete the artist part of object 2255
+    console.log(updateRecords("2457", "tracks", "tere pyaar mein")) // this will add the tracks
+    console.log(updateRecords("2658", "tracks", "kabhi mujhme khi")) // this will add the tracks
 
 </script>
