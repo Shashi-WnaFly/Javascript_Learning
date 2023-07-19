@@ -66,7 +66,7 @@
             "tracks": []
         },
 
-        "2658": {
+        "2558": {
             "album": "Sonu Nigam"
         }
     }
@@ -84,14 +84,8 @@
             collection[id][prop].push(value);
         }
 
-        else if(value !== ""){
+        else {
             collection[id][prop] = value;
-        }
-
-        else{
-            collection.push(id);
-            collection[id].push(prop);
-            collection[id][prop].push(value);
         }
 
         return collection;
@@ -104,6 +98,6 @@
 
     // console.log(updateRecords("2255", "artist", "")) // delete the artist part of object 2255
     console.log(updateRecords("2457", "tracks", "tere pyaar mein")) // this will add the tracks
-    console.log(updateRecords("2658", "tracks", "kabhi mujhme khi")) // this will add the tracks
+    console.log(updateRecords("2558", "tracks", "kabhi mujhme khi")) // this will add the tracks
 
 </script>
