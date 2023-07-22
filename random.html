@@ -1,0 +1,32 @@
+<script>
+
+    function randomNumber () {
+
+        // return Math.random() // this will return decimal number between 0 to 1
+        // return Math.floor(Math.random() * 100); // this will return whole number between 0 to 100
+        return Math.floor(Math.random() * 20); // this will return whole number between 0 to 20
+    }
+
+    console.log(randomNumber())
+
+    function chooseRandom(min, max){ // this will return number between argument value
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    console.log(chooseRandom(4, 7))
+
+    function convertStrToInt(str){  // it will return number
+        return parseInt(str) 
+    }
+    num1 = convertStrToInt("256")
+    num2 = convertStrToInt("12")
+
+    console.log(num1 + num2)
+
+    function convertBinStrToInt(str){
+        return parseInt(str , 2)
+    }
+
+    console.log(convertBinStrToInt("1001"))
+
+</script>
