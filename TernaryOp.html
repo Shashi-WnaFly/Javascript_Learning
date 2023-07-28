@@ -1,0 +1,59 @@
+<script>
+
+    function checkEquals(val1, val2){
+        return val1 === val2 ? true : false
+    }
+
+    console.log(checkEquals(12, 12))
+
+    function checkSign(num){ // multiple condition ternary operator.
+        return num > 0 ? "Positive" : num < 0 ? "Negative" : "zero"
+    }
+
+    console.log(checkSign(0))
+     
+    function checkScope() {
+        "use strict";
+        // var i = "function scope" i = block scope
+        let i = "function scope"
+        if(true) {
+        // i = "block scope" i = block scope
+        let i = "block scope"
+            console.log("This is block scope : " + i)
+        }
+        console.log("This is function scope : " + i)
+    }
+
+    checkScope()
+
+    // "let" uses note : people uses let instead of var keyword because let variable is a block element means it is accessible only in block
+
+    const s = [2, 3, 6, 4]
+    // s = [2, 3, 4, 6] error because of the keyword "const"
+    s[0] = 2
+    s[1] = 3
+    s[2] = 4
+    s[3] = 6
+    console.log(s) // so we can mutate const array
+
+    function freezeObj() {
+        "use strict";
+        const MATH_CONSTANTS = {
+            PI : 3.14
+        }
+        Object.freeze(MATH_CONSTANTS)
+
+        try {
+            MATH_CONSTANTS = 99
+        }
+        catch(ex){
+            console.log(ex)
+        }
+        return MATH_CONSTANTS.PI
+    }
+
+    const PI = freezeObj()
+    console.log(PI)
+    // In order to save object mutation use Object.freeze(obj)
+    
+</script>
