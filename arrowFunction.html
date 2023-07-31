@@ -1,0 +1,48 @@
+<script>
+
+    let anonymous = () => new Date();
+
+    console.log(anonymous)
+
+    let joinArr = (arr1, arr2) => arr1.concat(arr2)
+
+    console.log(joinArr([5,4,3], [2,1])) // output --> [5, 4, 3, 2, 1]
+
+    let Arr = (arr) => {
+        pos_int = arr.filter(num => Number.isInteger(num) && num > 0).map(x => x * x);
+        return pos_int;
+    }
+
+    let nums = [1, 4, -34, 4.2, 323, -334, 5, 3.33]
+    let squareList = Arr(nums);
+    console.log(squareList); // output --> [1, 16, 104329, 25]
+
+    let increment = (() => {
+        return function increment(number, value = 1){
+            return number + value;
+        }
+    }) ();
+
+    console.log(increment(5, 2)) // 7
+    console.log(increment(5)) // 6
+
+    // ******** Rest Operator ********
+    let rest = (() => {
+        return function (...args) {
+            return args.reduce((a, b) => a + b, 0)
+        }
+    }) ()
+    console.log(rest(1, 2, 3, 4, 5))
+
+    // ******* spread operator *********
+    let months = ['jan', 'feb', 'march', 'april', 'may']
+    let months2
+    (() => {
+        months2 = [...months]
+        months[0] = 'Dec'
+    })()
+
+    console.log(months2)
+
+
+</script>
