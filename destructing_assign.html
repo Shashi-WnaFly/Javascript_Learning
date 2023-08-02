@@ -1,0 +1,89 @@
+<script>
+// ************ Destructuring Assignment *************
+    const avg_temp = {
+        today: 37,
+        tomorrow: 43
+    };
+
+    function getTempOfTmrw(avg_temperature){
+        "use strict"
+        const { tomorrow : temp_Of_Tmrw } = avg_temperature;
+        return temp_Of_Tmrw;
+    }
+
+    console.log(getTempOfTmrw(avg_temp)) // output --> 43
+
+    const xyz = {
+        x : 45.2,
+        y : 23.4,
+        z : 808
+    }
+
+    function get_valx(vari){
+        const {x : return_val1} = vari
+        return return_val1;
+    }
+
+    console.log(get_valx(xyz)) // output --> 45.2
+
+    const LOCAL_FORECAST = {
+        today : {min : 50, max : 80},
+        tommorrow : {min : 45, max : 90}
+    }
+
+    function getTmrwMin(forecast){
+        const {tommorrow : {min : tmrwMin}} = forecast;
+        return tmrwMin;
+    }
+
+    console.log(getTmrwMin(LOCAL_FORECAST))
+
+    // ********  destructuring assignment with array **********
+
+    const [x, y, , , z] = [1, 2, 3, 4, 5];
+    // console.log(x, y) output --> 1 2
+    // console.log(x, y, z) output --> 1 2 5
+
+    let a = 5, b = 10;
+    (() => {
+        "use strict"; // please use semicolon with "use strict" otherwise it does not swap
+        [a, b] = [b, a]
+    })()
+
+    console.log(a) // output --> 10
+    console.log(b)  // output --> 5
+
+    const source = [1,2,3,4,5,6,7,8,9,10,11];
+
+    function removeFirstTwo(list){
+        const [ , , ...arr] = list;
+        return arr;
+    }
+
+    const arr = removeFirstTwo(source);
+    console.log(arr); // output --> 3,4,5,6,7,8,9,10,11
+    console.log(source) // output --> 1,2,3,4,5,6,7,8,9,10,11
+
+    // *********  Use Destructuring assignment to pass an object as a Function's Parameters  **********
+    // it use when api call
+    const stats = {
+        max : 56.78,
+        standard_deviation : 4.34,
+        median : 34.53,
+        mode : 23.87,
+        min : -0.75,
+        average : 45.25
+    };
+    const half = (function() {
+        // return function half(stats){
+        //     return (stats.min + stats.max) / 2.0
+        // }                            output will be same
+        return function({max, min}) {
+            return (max + min)/2.0
+        }
+    })();
+
+    console.log(stats);
+    console.log(half(stats))
+
+</script>
