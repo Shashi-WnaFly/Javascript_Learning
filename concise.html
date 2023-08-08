@@ -1,0 +1,39 @@
+<script>
+
+    const bicycle = {
+        gear : 2,
+        setGear(gear){
+            "use strict";
+            this.gear = gear
+        }
+    }
+
+bicycle.setGear(5);
+
+console.log(bicycle.gear)
+
+// use class Syntax to Define a constructor function
+
+class SpaceShuttle {
+    constructor(targetPlanet){
+        this.targetPlanet = targetPlanet;
+    }
+}
+
+let Shankar = new SpaceShuttle("Earth");
+console.log(Shankar.targetPlanet);
+
+function makeClass(){
+    class vegetable {
+        constructor(name){
+            this.name = name;
+        }
+    }
+    return vegetable;
+}
+
+const Vegetable = makeClass();
+const carrot = new Vegetable('Radish');
+console.log(carrot.name);
+
+</script>
