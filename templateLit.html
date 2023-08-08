@@ -1,0 +1,46 @@
+<script>
+
+    // create strings using template literals
+    const person = {
+        name : "Ramdhari Singh Dinkar",
+        age : 23
+    }
+
+    const greetings = `Hello, Mr. ${person.name} nice to meet you!
+    Your age is ${person.age}.`
+
+    console.log(greetings)
+
+    const result = {
+        success : ["max-length", "no-amd", "prefer-arrow-functions"],
+        failure : ["no-var", "var-on-top", "line-break"],
+        skipped : ["id-blacklist", "no-dup-keys"]
+    };
+
+    function makelist(arr) {
+        const resDisplayArray = [];
+        for(let i = 0; i < arr.length; i++){
+            resDisplayArray.push(`<li class="text-warning">${arr[i]}</li>`);
+        }
+        return resDisplayArray;
+    }
+
+    console.log(makelist(result.failure));
+
+    // write Concise object literal declarations Using simple fields
+    // const createPerson = (name, age, gender) => {
+
+    //     return {
+    //         name : name,
+    //         age : age,
+    //         gender : gender
+    //     };
+    // };
+
+    const createPerson = (name, age, gender) => ({name, age, gender});
+
+    console.log(createPerson("Hariharan", "55", "male"))
+
+
+
+</script>
