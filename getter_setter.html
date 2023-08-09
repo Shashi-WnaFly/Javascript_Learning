@@ -1,0 +1,27 @@
+<script>
+    // take fahrenheit and return celsius.
+    function makeClass() {
+        class Thermostat {
+            constructor(temp) {
+                this._temp = 5/9 * (temp - 32);
+            }
+            get temperature(){
+                return this._temp;
+            }
+            set temperature(updatedTemp){
+                this._temp = updatedTemp;
+            }
+        }
+        return Thermostat;
+    }
+
+    const thermostat = makeClass();
+    const thermo = new thermostat(98.8);
+    let temp = thermo.temperature; // calling the getter function
+    console.log(temp);
+
+    thermo.temperature = 29;
+    temp = thermo.temperature; // calling the setter function
+    console.log(temp)
+
+</script>
