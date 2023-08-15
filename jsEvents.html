@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #btn{
+        padding: 10px 15px;
+        background-color: blueviolet;
+        color: white;
+        border-radius: 6px;
+        border: none;
+    }
+    /* .container{
+        position: relative;
+    } */
+</style>
+<body>
+    <div class="container">
+        <p id="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure, dolor sint, vel enim totam temporibus ipsam quo assumenda nihil similique deserunt, ipsum eligendi esse rem iusto quod pariatur itaque? Veritatis provident debitis ipsum, iste cupiditate aspernatur beatae esse! Sunt, blanditiis voluptate. Similique, nisi non voluptas repudiandae id odio maxime ullam unde ab quibusdam porro dicta rerum itaque excepturi libero temporibus officia? Eos quam laudantium sint accusamus quisquam quo eum impedit aperiam exercitationem necessitatibus sapiente, nihil vero, veniam atque doloremque quibusdam reprehenderit nisi? Officiis qui tempore nulla. Fuga quaerat voluptatibus sapiente aut minus ipsam recusandae, impedit ex perferendis. Impedit voluptatem nesciunt voluptates, explicabo obcaecati minima enim eos a omnis perferendis, hic adipisci provident alias quis quidem iusto nostrum accusamus consequatur porro eum, possimus laboriosam saepe qui. Autem laborum nam accusantium earum cum temporibus? Laborum.</p>
+    </div>
+    <button id="btn" onclick="visiblity()">hide/unhide</button>
+
+    <script>
+        let btn = document.getElementById("btn");
+        btn.addEventListener("mouseover", function run(){
+            // alert("Hey! Your mouse on me....");
+        });
+
+        let para = document.getElementById("para");
+        para.addEventListener("mouseout", function mousebahar(){
+            // alert("Hey! Where is your mouse?");
+        });
+
+        function visiblity(){
+            let text = document.getElementById("para");
+            if(text.style.visibility != "hidden"){
+                text.style.visibility = "hidden";
+            }
+            else{
+                text.style.visibility = "visible";
+            }
+    }
+    </script>
+</body>
+
+</html>
