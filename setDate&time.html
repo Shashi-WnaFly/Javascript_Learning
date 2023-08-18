@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        Namaste Globe.
+        <div id="time"></div>
+    </div>
+    <script>
+        // let name = document.getElementsByClassName(container);
+        function alerter(){
+            console.log("Helllloooooooo....");
+        }
+
+        let alerterTime = setTimeout(alerter, 5000);
+        console.log(alerterTime);
+
+        function clearTimeO(){
+            clearTimeout(alerterTime);
+        }
+        setTimeout(clearTimeO, 2000);
+
+        function time(){
+            date = new Date();
+            console.log(date);
+            document.getElementById("time").innerHTML = date;
+        }
+        setInterval(time, 1000);
+        clearInterval(time, 10000);
+    </script>
+</body>
+</html>
