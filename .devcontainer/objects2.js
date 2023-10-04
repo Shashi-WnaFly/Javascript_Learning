@@ -44,4 +44,18 @@ for(let i = 0; i < keyValue.length; i++){
     if(keyValue[i] === "led") console.log("Hey! Hi led")
 }
 
-console.log(obj3.hasOwnProperty("paper")); // its only take key
+console.log(obj3.hasOwnProperty("paper")); // its only take key not value
+
+//_____________ destructuring of the object ________________
+
+const course = {
+    coursename: "javascript beginner to advance",
+    price: "free",
+    teachername: "Hitesh sir"
+}
+
+console.log(course.coursename)
+
+// const {coursename} = course
+const {coursename: crsname} = course
+console.log(crsname)
