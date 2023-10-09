@@ -31,12 +31,12 @@ console.log(sum(23, 23));
 let pass = () => ({username: "Ravi Kumar"})
 console.log(pass())
 
-// IIFE --> Immediately invoked function execution
+// IIFE --> Immediately invoked function expression
 
-(function name() {
-    console.log(`this is pass value`);
-})()
+let method = (function name(val) {
+    console.log(`this is pass value ${val}`);
+})(24232)
 
-// ( () => {
-//     console.log("A brown fox jumps over the lazy dog")
-// })
+const arow = ((animal) => {
+    console.log("A brown fox jumps over the lazy dog", animal)
+})("Orangutan")
