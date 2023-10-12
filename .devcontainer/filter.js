@@ -20,3 +20,20 @@ const arrNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const newNums = arrNums.reduce((acc, currval) => acc+currval)
 console.log(newNums)
+
+const shopList = [
+    {
+        itemName: "Spring boot course",
+        price: 19999
+    },
+    {
+        itemName: "Java course",
+        price: 3999
+    },
+    {
+        itemName: "Blockchain",
+        price: 15999
+    }
+];
+const totalPrice = shopList.reduce( (acc, currval) => acc+currval.price, 0);
+console.log(totalPrice);
