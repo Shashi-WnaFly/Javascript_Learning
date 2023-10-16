@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom manupulation</title>
+    <!-- <style>
+        .day{
+            background-color: blue;
+        }
+    </style> -->
+</head>
+<body>
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+
+</body>
+    <script>
+        const parent = document.querySelector(".parent");
+        // for(let i = 0; i < parent.children.length; i++){
+
+        //     if(i%2 == 0){
+        //         parent.children[i].style.backgroundColor = "salmon";
+        //         parent.children[i].style.color = "#fff";
+        //         parent.children[i].style.padding = "1rem";
+        //     }
+
+        //     else{
+        //         parent.children[i].style.backgroundColor = "green";
+        //         parent.children[i].style.color = "#fff";
+        //         parent.children[i].style.padding = "1rem";
+        //     }
+        // }
+        // console.log(parent.lastElementChild.innerHTML);
+
+        // const dayOne = parent.firstElementChild;
+        // console.log(dayOne.nextElementSibling.innerHTML)
+
+        // const day = document.querySelector(".day");
+        // console.log(day.parentElement);
+
+        console.log("NODES: ", parent.childNodes);
+    </script>
+</html>
