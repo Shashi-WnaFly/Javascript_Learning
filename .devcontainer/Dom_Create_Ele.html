@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element</title>
+    <style>
+        body{
+            background-color: #212121;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const ele = document.createElement('div')
+        ele.id = "main";
+        const parag = document.createElement("p");
+        parag.className = "para";
+        // parag.innerHTML = "Hello World!";
+        const text = document.createTextNode("Hello world!");
+        parag.appendChild(text);
+        ele.appendChild(parag);
+        document.body.appendChild(ele);
+        // parag.style.color = "salmon";
+        ele.style.color = "salmon";
+
+        const par = document.createElement("p");
+        par.innerHTML = "I am learning Document Object Module and manupulation";
+        ele.appendChild(par);
+</script>
+</body>
+</html>
