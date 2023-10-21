@@ -1,0 +1,55 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: linear-gradient(rgba(255, 191, 0, 0.522), rgba(0, 255, 162, 0.46));
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+input {
+    padding: 10px 2rem;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    margin: 0.5rem auto;
+    text-align: center;
+}
+
+input::placeholder {
+    color: grey;
+    font-size: 400;
+    text-align: center;
+}
+
+button {
+    padding: 1rem 4rem;
+    margin: 0px auto;
+    margin-top: 1rem;
+    font-size: 16px;
+    background-color: rgb(97, 97, 227);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    background-image: linear-gradient(rgb(6, 203, 36), rgba(47, 255, 0, 0.411));
+}
+
+button:active {
+    background-image: linear-gradient(rgba(47, 255, 0, 0.411), rgb(6, 203, 36));
+}
+
+#res {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#message {
+    font-weight: 700;
+    color: #03909d;
+}
