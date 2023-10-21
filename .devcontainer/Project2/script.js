@@ -14,7 +14,6 @@ form.addEventListener('submit', (e) => {
         res.innerHTML = "Please enter valid height";
     }
     else if (weight < 0 || weight === "" || isNaN(weight)) {
-        // res.appendChild(document.createTextNode("Please enter Valid height"));   note:- every click create a text node
         res.innerHTML = "Please enter valid weight";
     }
     else {
