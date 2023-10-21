@@ -1,0 +1,66 @@
+body{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#container{
+    display: flex;
+    width: 25rem;
+    height: 20rem;
+    padding: 2rem;
+    border-radius: 25px;
+    flex-wrap: wrap;
+    border: 2px solid gold;
+    margin: 7rem auto;
+    background-color: #fff;
+    overflow: scroll;
+}
+
+.button{
+    width: 6rem;
+    height: 6rem;
+    margin: 1rem;
+    border: none;
+    outline: none;
+
+}
+
+.button:hover{
+    box-shadow: 3px 3px 8px grey;
+}
+.button:active{
+    opacity: 0.7;
+}
+
+#grey{
+    background-color: grey;
+}
+#salmon{
+    background-color: salmon;
+}
+#cornflowerblue{
+    background-color: cornflowerblue;
+}
+#purple{
+    background-color: purple;
+}
+#cadetblue{
+    background-color: cadetblue;
+}
+#aquamarine{
+    background-color: aquamarine;
+}
+#orange{
+    background-color: orange;
+}
+#paleturquoise{
+    background-color: paleturquoise;
+}
+#lawngreen{
+    background-color: lawngreen;
+}
+#olivedrab{
+    background-color: olivedrab;
+}
+

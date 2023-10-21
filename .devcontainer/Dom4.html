@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create and Remove Element</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <ul id="item-list">
+        
+    </ul>
+</body>
+<script>
+
+    let addList = (langName) => {
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector("#item-list").appendChild(li);
+    }
+
+    addList("Javascript");
+    addList("Python");
+    addList("Kotlin");
+    addList("Java")
+
+    // const removeItem = document.querySelector("li:nth-child(3)");
+    // removeItem.remove();
+
+    //edit
+    const editList = (elem, langName) => {
+        let newli = document.createElement("li");
+        newli.appendChild(document.createTextNode(langName));
+        elem.replaceWith(newli);
+    }
+
+    const editItem = document.querySelector("li:nth-child(2)");
+    let s = "Golang";
+    editList(editItem, s);
+
+</script>
+</html>
