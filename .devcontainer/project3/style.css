@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #212121;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    color: #fff;
+}
+
+#banner{
+    font-family: 'Bungee Shade', sans-serif;
+    color: orange;
+    font-size: 28px;
+}
+
+#clock{
+    background-color: orange;
+    font-size: 30px;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+}
