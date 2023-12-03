@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hi Shashi Anand</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // const h1TextChange = () => {
+    //     document.querySelector('h1').innerHTML = "Good Morning!"
+    // }
+    // const textTimeOut = setTimeout(h1TextChange, 2000)
+
+    // document.querySelector('#stop').addEventListener('click', () => {
+    //     clearTimeout(textTimeOut)
+    // })
+
+    const intervalText = () => {
+        console.log("Good Life", Date.now())
+    }
+    
+    let interval
+
+    document.querySelector('#start').addEventListener('click', function(){
+        interval = setInterval(intervalText, 1500)
+    })
+
+
+    document.querySelector('#stop').addEventListener('click', () => {
+        clearInterval(interval)
+        interval = null
+    })
+    
+</script>
+</html>
